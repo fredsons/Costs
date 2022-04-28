@@ -4,6 +4,7 @@ import Home from "./components/pages/Home";
 import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contact";
 import  NewProject from "./components/pages/NewProject";
+import Container from "./components/layout/Container";
 function App() {
   return (
     <Router>
@@ -15,18 +16,20 @@ function App() {
         
       </div>
       <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route path="/contact">
-          <Contact/>
-        </Route>
-        <Route path="/company">
-          <Company/>
-        </Route>
-        <Route path="/newproject">
-          <NewProject/>
-        </Route>
+        <Container customClass="min-height">
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route path="/contact">
+            <Contact/>
+          </Route>
+          <Route path="/company">
+            <Company/>
+          </Route>
+          <Route path="/newproject">
+            <NewProject/>
+          </Route>
+        </Container>
       </Switch>
       <p>Footer</p>
     </Router>
