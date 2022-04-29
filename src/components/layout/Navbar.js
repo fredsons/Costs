@@ -4,23 +4,27 @@ import styles from "./Navbar.module.css";
 import logo from "../../images/costs_logo.png";
 function Navbar() {
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <Container>
         <Link to="/">
           <img src={logo} alt="Costs" />
         </Link>
 
-        <ul>
-          <li>
+        <ul className={styles.list}>
+          <li className={styles.item}>
             <Link to="/">Home</Link>
           </li>
 
-          <li>
-            <Link to="/contact">Contact</Link>
+          <li className={styles.item}>
+            <Link to="/projects">Projetos</Link>
           </li>
 
-          <li>
+          <li className={styles.item}>
             <Link to="/company">Company</Link>
+          </li>
+
+          <li className={styles.item}>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </Container>
